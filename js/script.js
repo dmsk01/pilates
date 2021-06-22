@@ -37,23 +37,38 @@ let pageSlider = new Swiper('.page',{
     bulletActiveClass:'page__bullet_active',
   },
 
+  scrollbar:{
+    el:'.page__scroll',
+    dragClass:'page__drag-scroll',
+    draggable:true,
+  },
+
   init:false,
 
   on:{
     init:function(){
       menuSlider();
+      setScrollType();
       wrapper.classList.add('_loaded');
     },
     slideChange:function(){
+      setSlidersCounter();
       menuSliderRemoveActive();
-      menuLinks[pageSlider.realIndex].classList.add('._active');
+      menuLinks[pageSlider.realIndex].classList.add('_active');
+    },
+    resize:function() {
+      setScrollType();
     }
   }
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
 
+function setSlidersCounter() {
+  const sliderCounter = document.querySelector('.page__slidesCounter');
 
+  sliderCounter.innerHTML = `0${pageSlider.realIndex + 1}`;
+}
 // Adding active class function and event listener adding
 
 function menuSlider(){
@@ -79,5 +94,29 @@ function menuSliderRemoveActive(){
     menuLinkActive.classList.remove('_active');
   }
 }
+
+// Func to toggle free mode (scroll type) on window resize, depends on content height
+
+function setScrollType(){
+  if(wrapper.classList.contains('_free')){
+    wrapper.classList.remove('_free');
+    pageSlider.params.freeMode = false;
+  }
+
+  for(let i = 0; i < pageSlider.slides.length; i++){
+    const pageSlide = pageSlider.slides[i];
+    const pageSlideContent = pageSlide.querySelector('.screen__content');
+
+    if(pageSlideContent){
+      const pageSlideContentHeight = pageSlideContent.offsetHeigt;
+      if(pageSlideContentHeight > window.innerHeight){
+        wrapper.classList.add('_free');
+        pageSlider.params.freeMode = true;
+        break;
+      }
+    }
+  }
+}
+
 
 pageSlider.init();

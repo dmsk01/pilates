@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +40,7 @@
       <main class="page">
         <div class="page__wrapper">
           <div class="page__screen screen">
-            <div class="screen__content _container">
+            <div class="screen__content screen__content_flex _container">
               <div class="screen__info">
                 <div class="screen__decor"></div>
                 <h1 class="screen__main-title">студия<br>пилатеса</h1>
@@ -58,12 +57,94 @@
           </div>
           <div class="page__screen screen">
             <div class="screen__content _container">
-               <h2 class="screen__title title">О пилатесе</h2>
+               <div class="screen__about about">
+                 <h2 class="screen__title about__title">О пилатесе</h2>
+                 <div class="about__body">
+                   <div class="about__info">
+                     <p class="about__text">Пилатес соединяет элементы растяжки с элементами силовой тренировки</p>
+                     <p class="about__text">Комплекс упражнений укрепляет мышцы пресса и спины, улучшает гибкость мышц и связок, подвижность суставов и избавляет  от дискомфорта в позвоночнике</p>
+                     <a href="#" class="about__more"><span>Подробнее</span></a>
+                   </div>
+                   <div class="about__bg">
+                     <div class="about__bigCircleWrapper">
+                      <div class="about__bigCircle">
+                        <img src="./img/secondScreen/bigCircle.jpg" alt="people meditating">
+                      </div>
+                     </div>
+                     <div class="about__smallCircleWrapper">
+                      <div class="about__smallCircle">
+                        <img src="./img/secondScreen/smallCircle.jpg" alt="people meditating">
+                      </div>
+                     </div>
+                     <!-- <div class="about__circle">
+                      <div class="about__smallCircle">
+                        <img src="./img/secondScreen/smallCircle.jpg" alt="women stretching">
+                      </div>
+                    </div> -->
+                   </div>
+                 </div>
+               </div>
             </div>
           </div>
           <div class="page__screen screen">
             <div class="screen__content _container">
               <h2 class="screen__title title">Расписание и стоимость</h2>
+              <div class="schedule">
+                <div class="schedule__row">
+                  <div class="schedule__column schedule__column_light column-schedule">
+                    <div class="column-schedule__inner">
+                      <div class="column-schedule__number">01</div>
+                      <div class="column-schedule__level">
+                        уровень <span>новичек</span>
+                      </div>
+                      <div class="column-schedule__cost">150 руб./занятие</div>
+                      <div class="column-schedule__days">
+                        <div class="column-schedule__day"><span>пн</span>9:00-10:00</div>
+                        <div class="column-schedule__day"><span>ср</span>9:00-10:00</div>
+                        <div class="column-schedule__day"><span>пт</span>9:00-10:00</div>
+                        <div class="column-schedule__day"><span>пт</span>9:00-10:00</div>
+                      </div>
+                      <div class="screen__button button">
+                        <a href="#">Записаться</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="schedule__column column-schedule">
+                    <div class="column-schedule__inner">
+                      <div class="column-schedule__number">02</div>
+                      <div class="column-schedule__level">
+                        уровень <span>профи</span>
+                      </div>
+                      <div class="column-schedule__cost">200 руб./занятие</div>
+                      <div class="column-schedule__days">
+                        <div class="column-schedule__day"><span>пн</span>18:45-19:45</div>
+                        <div class="column-schedule__day"><span>ср</span>18:45-19:45</div>
+                        <div class="column-schedule__day"><span>пт</span>18:45-19:45</div>
+                      </div>
+                      <div class="screen__button button">
+                        <a href="#">Записаться</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="schedule__column schedule__column_dark column-schedule">
+                    <div class="column-schedule__inner">
+                      <div class="column-schedule__number">03</div>
+                      <div class="column-schedule__level">
+                        уровень <span>Мастер</span>
+                      </div>
+                      <div class="column-schedule__cost">350 руб./занятие</div>
+                      <div class="column-schedule__days">
+                        <div class="column-schedule__day"><span>пн</span>20:00-21:00</div>
+                        <div class="column-schedule__day"><span>ср</span>20:00-21:00</div>
+                        <div class="column-schedule__day"><span>пт</span>20:00-21:00</div>
+                      </div>
+                      <div class="screen__button button">
+                        <a href="#">Записаться</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="page__screen screen">
@@ -82,16 +163,19 @@
             </div>
           </div>
         </div>
+        <div class="page__slidesCounter">01</div>
         <div class="page__pagination"></div>
+        <div class="page__scroll">
+        </div>
       </main>
       <footer class="footer">
         <div class="footer__content _container">
           footer
         </div>
       </footer>
-      <script src="js/vendors.js"></script>
-      <script src="js/app.js"></script>
-      <script src="js/script.js"></script>
-		</div>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
 	</body>
 </html>
