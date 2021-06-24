@@ -3196,11 +3196,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 /* /Page scroll ===== */
 
 .screen{
-  flex: 1 0 100%;
+  /* flex: 1 0 100%; */
   position: relative;
-  height: 100%;
+  /* height: 100%;
   display: flex;
-  align-items: center;
+  align-items: center; */
 }
 
 .screen__content{
@@ -3607,6 +3607,116 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /* /About section */
+
+/* Trainging flow */
+
+.traning-flow {
+  width: 100%;
+  min-height: 100%;
+}
+
+.traning-flow__section {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.traning-flow__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  margin: 0 -20px;
+}
+
+.traning-flow__inner_reverse {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.traning-flow__info {
+  padding: 0 20px;
+  max-width: 380px;
+}
+
+.traning-flow__title {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.traning-flow__text {
+  font-size: 14px;
+}
+
+.traning-flow__image {
+  position: relative;
+  padding: 0 20px;
+}
+
+.traning-flow__image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(15%,-50%);
+  z-index: -2;
+  border-radius: 50%;
+  max-width: 370px;
+  max-height: 370px;
+  width: 100%;
+  height: 100%;
+  background-color: #c8d4ac;
+
+}
+
+.traning-flow__inner_reverse .traning-flow__image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-20%,-35%);
+  z-index: -2;
+  border-radius: 50%;
+  max-width: 465px;
+  max-height: 465px;
+  width: 465px;
+  height: 465px;
+  /* width: 100%;
+  height: 100%; */
+  border: 40px solid #c8d4ac;
+  background: #fff;
+}
+
+.traning-flow__image_bigger::before {
+  transform: translate(25%,-65%);
+  width: 380px;
+  height: 380px;
+}
+
+.traning-flow__inner_reverse .traning-flow__image_right::before {
+  transform: translate(10%,-65%);
+}
+
+.traning-flow__image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-30%,30%);
+  z-index: -1;
+  background: url('../img/secondScreen/dots.png') no-repeat;
+}
+
+.traning-flow__inner_reverse .traning-flow__image::after {
+  display: none;
+}
+
+.traning-flow__image_bigger::after {
+  transform: translate(-30%,-20%);
+}
+/* /Trainging flow */
 
 .tabs-block {
   margin: 0px 0px 50px 0px;
