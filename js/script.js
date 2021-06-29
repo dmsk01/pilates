@@ -62,6 +62,24 @@ let pageSlider = new Swiper('.page',{
   }
 });
 
+let reviewsSlider = new Swiper('.reviews',{
+  wrapperClass:'reviews__wrapper',
+
+  slideClass:'slide-reviews',
+
+  direction:'horizontal',
+  speed:500,
+  infinity:true,
+
+  pagination:{
+    el:'.review__pagination',
+    type:'bullets',
+    clickable:true,
+    bulletClass:'review__bullet',
+    bulletActiveClass:'review__bullet_active',
+  },
+});
+
 let menuLinks = document.querySelectorAll('.menu__link');
 
 function setSlidersCounter() {
